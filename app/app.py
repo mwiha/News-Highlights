@@ -6,33 +6,32 @@ app = Flask(__name__)
 
 @app.route('/')
 def Index():
-    newsapi = NewsApiClient(api_key="c2dc80373e954e7fbd0678a357875019")
-    topheadlines = newsapi.get_top_headlines(sources="bbc-news")
+#     newsapi = NewsApiClient(api_key="c2dc80373e954e7fbd0678a357875019")
+#     topheadlines = newsapi.get_top_headlines(sources="")
     
-    articles = topheadlines['articles']
+#     articles = topheadlines['articles']
     
-    desc = []
-    news = []
-    img = []
+#     desc = []
+#     news = []
+#     img = []
 
-    for i in range(len(articles)):
-        myarticles = articles[i]
+#     for i in range(len(articles)):
+#         myarticles = articles[i]
         
-        news.append(myarticles['title'])
-        desc.append(myarticles['description'])
-        img.append(myarticles['urlToImage'])
+#         news.append(myarticles['title'])
+#         desc.append(myarticles['description'])
+#         img.append(myarticles['urlToImage'])
         
-    mylist = zip(news,desc,img)
+#     mylist = zip(news,desc,img)
         
-    return render_template('index.html', context = mylist)
+    return render_template('index.html')
 
 
 
-@app.route('/')
-def aljazeera ():
+@app.route('/aljazeera')
+def Aljazeera():
     newsapi = NewsApiClient(api_key="c2dc80373e954e7fbd0678a357875019")
     topheadlines = newsapi.get_top_headlines(sources="al-jazeera-english")
-    
     
     articles = topheadlines['articles']
     
@@ -77,10 +76,10 @@ def abc ():
 
         
         
-@app.route('/')
-def ansa ():
+@app.route('/abc-news-au')
+def abcnewsau ():
     newsapi = NewsApiClient(api_key="c2dc80373e954e7fbd0678a357875019")
-    topheadlines = newsapi.get_top_headlines(sources="ansa-news")
+    topheadlines = newsapi.get_top_headlines(sources="abc-news-au")
     
     
     articles = topheadlines['articles']
@@ -98,7 +97,7 @@ def ansa ():
         
     mylist = zip(news,desc,img)
         
-    return render_template('ansa.html', context = mylist)
+    return render_template('abc-news-au.html', context = mylist)
 
 
 @app.route('/asso')
@@ -106,7 +105,6 @@ def Associatedpress():
     newsapi = NewsApiClient(api_key="c2dc80373e954e7fbd0678a357875019")
     topheadlines = newsapi.get_top_headlines(sources="associated-press")
     
-    
     articles = topheadlines['articles']
     
     desc = []
@@ -122,7 +120,7 @@ def Associatedpress():
         
     mylist = zip(news,desc,img)
         
-    return render_template('asso.html', context = mylist)
+    return render_template('associatedpress.html', context = mylist)
 
 if __name__== "__main__":
     app.run(debug=True)

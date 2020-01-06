@@ -1,26 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>News Highlights</title>
 </head>
-<body>
-    <div class="jumbotron" style="color:black">
-        <h1 style="color: black">
-           News Highlights
-        </h1>
 
-    </div>
-    
+<body>
     <div class="container">
-        {% for new, des, i in context %}
-            <img src="{{ i }}" alt="{{ title }}">
-            <h3>News: {{ new}}</h3>
-            <p>Description: {{ des}}</p>
-        {% endfor %}
+        <p><a href="{{url_for('Associatedpress')}}">Associated-press</a></p>
+        <p><a href="{{url_for('abc')}}">Abc News</a></p>
+        <p><a href="{{url_for('abc-news-au')}}">Abc-news-au</a></p>
+        <p><a href="{{url_for('Aljazeera')}}">Al-jazeera News</a></p>
     </div>
 </body>
+
 </html>

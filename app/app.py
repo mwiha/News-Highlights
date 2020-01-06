@@ -51,7 +51,7 @@ def Aljazeera():
     return render_template('aljazeera.html', context = mylist)
 
 
-@app.route('/')
+@app.route('/abc')
 def abc ():
     newsapi = NewsApiClient(api_key="c2dc80373e954e7fbd0678a357875019")
     topheadlines = newsapi.get_top_headlines(sources="abc-news")
@@ -76,10 +76,10 @@ def abc ():
 
         
         
-@app.route('/abc-news-au')
-def abcnewsau ():
+@app.route('/cnn')
+def Cnn():
     newsapi = NewsApiClient(api_key="c2dc80373e954e7fbd0678a357875019")
-    topheadlines = newsapi.get_top_headlines(sources="abc-news-au")
+    topheadlines = newsapi.get_top_headlines(sources="cnn")
     
     
     articles = topheadlines['articles']
@@ -97,7 +97,7 @@ def abcnewsau ():
         
     mylist = zip(news,desc,img)
         
-    return render_template('abc-news-au.html', context = mylist)
+    return render_template('cnn.html', context = mylist)
 
 
 @app.route('/asso')

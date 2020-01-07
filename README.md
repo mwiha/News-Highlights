@@ -1,5 +1,6 @@
 
-##  NEWS HIGHTLIGHTS ##
+##  NEWS HIGHTLIGHTS ## 
+
 
 # Author #
 
@@ -9,7 +10,7 @@
 
 This application allows people to acces different news and affairs happening around the world
 
-# features
+# features #
 
 - the user will be able  to:
 

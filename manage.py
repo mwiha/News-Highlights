@@ -38,6 +38,7 @@ def Aljazeera():
     desc = []
     news = []
     img = []
+    pubAt=[]
 
     for i in range(len(articles)):
         myarticles = articles[i]
@@ -45,8 +46,9 @@ def Aljazeera():
         news.append(myarticles['title'])
         desc.append(myarticles['description'])
         img.append(myarticles['urlToImage'])
+        pubAt.append(myarticles['publishedAt'])
         
-    mylist = zip(news,desc,img)
+    mylist = zip(news,desc,img,pubAt)
         
     return render_template('aljazeera.html', context = mylist)
 
@@ -62,6 +64,7 @@ def abc ():
     desc = []
     news = []
     img = []
+    pubAt = []
 
     for i in range(len(articles)):
         myarticles = articles[i]
@@ -69,8 +72,9 @@ def abc ():
         news.append(myarticles['title'])
         desc.append(myarticles['description'])
         img.append(myarticles['urlToImage'])
+        pubAt.append(myarticles['publishedAt'])
         
-    mylist = zip(news,desc,img)
+    mylist = zip(news,desc,img, pubAt)
         
     return render_template('abc.html', context = mylist)
 
@@ -87,6 +91,7 @@ def Cnn():
     desc = []
     news = []
     img = []
+    pubAt = []
 
     for i in range(len(articles)):
         myarticles = articles[i]
@@ -94,8 +99,9 @@ def Cnn():
         news.append(myarticles['title'])
         desc.append(myarticles['description'])
         img.append(myarticles['urlToImage'])
+        pubAt.append(myarticles['publishedAt'])
         
-    mylist = zip(news,desc,img)
+    mylist = zip(news,desc,img,pubAt)
         
     return render_template('cnn.html', context = mylist)
 
@@ -110,7 +116,7 @@ def Associatedpress():
     desc = []
     news = []
     img = []
-    url = []
+    pubAt= []
 
     for i in range(len(articles)):
         myarticles = articles[i]
@@ -118,9 +124,9 @@ def Associatedpress():
         news.append(myarticles['title'])
         desc.append(myarticles['description'])
         img.append(myarticles['urlToImage'])
-        url.append(myarticles['url'])
+        pubAt.append(myarticles['publishedAt'])
         
-    mylist = zip(news,desc,img,url)
+    mylist = zip(news,desc,img,pubAt)
         
     return render_template('associatedpress.html', context = mylist)
 

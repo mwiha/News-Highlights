@@ -22,8 +22,8 @@
             {% for new, des, i in context %}
             <img src="{{ i }}" alt="{{ title }} class=img-fluid">
             <h3>News: {{ new}}</h3>
-            <p>Description: {{ des}}</p>
-            <p>Published On: {{pubAt}}</p>
+            <h3>Description:</h3> {{ des}}
+            <h3>Published On: </h3>{{pubAt}}
             <p><a href="{{url}}" class="btn-primary p-2">Read more</a></p>
             {% endfor %}
         </div>

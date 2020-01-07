@@ -91,7 +91,6 @@ def Cnn():
     desc = []
     news = []
     img = []
-    url = []
     pubAt = []
 
     for i in range(len(articles)):

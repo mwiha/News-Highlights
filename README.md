@@ -44,7 +44,7 @@ alicemwihaki992gmail.com
 
 # known Bugs #
 
-Not known bugs for now
+The links to categories are not displaying any thing
 
 # Licence #
 

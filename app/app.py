@@ -38,6 +38,7 @@ def Aljazeera():
     desc = []
     news = []
     img = []
+    pubAt=[]
 
     for i in range(len(articles)):
         myarticles = articles[i]
@@ -45,8 +46,9 @@ def Aljazeera():
         news.append(myarticles['title'])
         desc.append(myarticles['description'])
         img.append(myarticles['urlToImage'])
+        pubAt.append(myarticles['publishedAt'])
         
-    mylist = zip(news,desc,img)
+    mylist = zip(news,desc,img,pubAt)
         
     return render_template('aljazeera.html', context = mylist)
 

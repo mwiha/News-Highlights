@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,31 +9,33 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Document</title>
 </head>
+
 <body class="container">
     <div class="jumbotron" style="color:black">
         <h1 style="color: black">
             News Highlights
         </h1>
     </div>
-    <div class="container-fluid">
+    <div class="container" style="padding: 1px 16px;">
         {% for new, des, i,pubAt in context %}
-            <img src="{{ i }}" alt="{{ title }} class=img-fluid">
-            <h3>News: {{ new}}</h3>
-            <p>Description: </h3>{{ des}}
+        <img src="{{ i }}" alt="{{ title }}" class="img-fluid">
+        <h3>News: {{ new}}</h3>
+        <p>Description: </h3>{{ des}}
             <p>Published On: </h3>{{pubAt}}
-            <p><a href="{{ur}}" class="btn-primary p-2">Read more</a></p>
-        {% endfor %}
+                <p><a href="{{ur}}" class="btn-primary p-2">Read more</a></p>
+                {% endfor %}
     </div>
 
-    <div class="categories col-md-6" style="margin-top:-50%;">
-        
-            <ul>
-                <li><a class="{{url}}">Health</a></li>
-                <li><a href="{{url}}">Entertainment</a></li>
-                <li><a href="{{url}}">Sports</a></li>
-                <li><a href="{{url}}">politics</a></li>
-            </ul>
-    
-        </div>
+    <div class="categories col-md-6" style="margin-top:-50%;display: flex;">
+<!-- 
+        <ul>
+            <li><a class="{{url}}">Health</a></li>
+            <li><a href="{{url}}">Entertainment</a></li>
+            <li><a href="{{url}}">Sports</a></li>
+            <li><a href="{{url}}">politics</a></li>
+        </ul>
+
+    </div> -->
 </body>
+
 </html>

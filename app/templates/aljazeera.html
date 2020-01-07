@@ -17,10 +17,10 @@
         </h1>
 
     </div>
-    <div class="card" style="width: 18rem;align-items: center;">
-        <div class="container" style="margin-left:120%;padding:1px 16px;height:1000px;">
-            {% for new, des, i in context %}
-            <img src="{{ i }}" alt="{{ title }} class=img-fluid">
+    <!-- <div class="card" style="width: 18rem;align-items: center;"> -->
+        <div class="container" style="padding:1px 16px;height:1000px;">
+            {% for new, des, i,pubAt in context %}
+            <img src="{{ i }}" alt="{{ title }} class=img-fluid" >
             <h3>News: {{ new}}</h3>
             <h3>Description:</h3> {{ des}}
             <h3>Published On: </h3>{{pubAt}}

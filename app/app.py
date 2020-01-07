@@ -110,6 +110,7 @@ def Associatedpress():
     desc = []
     news = []
     img = []
+    url = []
 
     for i in range(len(articles)):
         myarticles = articles[i]
@@ -117,10 +118,14 @@ def Associatedpress():
         news.append(myarticles['title'])
         desc.append(myarticles['description'])
         img.append(myarticles['urlToImage'])
+        url.append(myarticles['url'])
         
-    mylist = zip(news,desc,img)
+    mylist = zip(news,desc,img,url)
         
     return render_template('associatedpress.html', context = mylist)
 
 if __name__== "__main__":
-    app.run(debug=True)
+    app.run(debug=True) 
+    
+    
+    

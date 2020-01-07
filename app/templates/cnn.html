@@ -10,18 +10,18 @@
 </head>
 <body>
         <div class="jumbotron" style="color:black">
-                <h1 style="color: black">
-                   News Highlights
-                </h1>
-        
-            </div>
+            <h1 style="color: black">
+                News Highlights
+            </h1>
+        </div>
             
-            <div class="container">
-                {% for new, des, i in context %}
-                    <img src="{{ i }}" alt="{{ title }} class=img-fluid">
-                    <h3>News: {{ new}}</h3>
-                    <p>Description: {{ des}}</p>
-                {% endfor %}
-            </div>
+        <div class="container">
+            {% for new, des, img, url in context %}
+                <img src="{{img}}" alt="{{ title }}" class="img-fluid">
+                <h3>News:</h3> {{new}}
+                <p>Description: {{ des}}</p>
+                <button><a href="{{url}}">Read more</a></button>
+            {% endfor %}
+        </div>
 </body>
 </html>

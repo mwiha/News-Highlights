@@ -33,6 +33,11 @@
 
 **python3.6 app.py**
 
+# contacts #
+
+- for more information,comments or questions reach me through:
+alicemwihaki992gmail.com
+
 # known Bugs #
 
 Not known bugs for now

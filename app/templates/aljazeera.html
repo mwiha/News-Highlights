@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,32 +9,34 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Document</title>
 </head>
-<body>
-        <div class="jumbotron" style="color:black">
-                <h1 style="color: black">
-                   News Highlights
-                </h1>
-        
-            </div>
-            
-            <div class="container"  style="margin-left:25%;padding:1px 16px;height:1000px;">
-                {% for new, des, i in context %}
-                    <img src="{{ i }}" alt="{{ title }} class=img-fluid">
-                    <h3>News: {{ new}}</h3>
-                    <p>Description: {{ des}}</p>
-                    <button><a href="{{url}}">Read more</a></button>
-                {% endfor %}
-            </div>
 
-            <div class="categories col-md-6" style="margin-top:-50%;">
-        
-                    <ul>
-                        <li><a class="{{url}}">Health</a></li>
-                        <li><a href="{{url}}">Entertainment</a></li>
-                        <li><a href="{{url}}">Sports</a></li>
-                        <li><a href="{{url}}">politics</a></li>
-                    </ul>
-            
-                </div>
+<body>
+    <div class="jumbotron" style="color:black">
+        <h1 style="color: black">
+            News Highlights
+        </h1>
+
+    </div>
+    <div class="card" style="width: 18rem;align-items: center;">
+        <div class="container" style="margin-left:120%;padding:1px 16px;height:1000px;">
+            {% for new, des, i in context %}
+            <img src="{{ i }}" alt="{{ title }} class=img-fluid">
+            <h3>News: {{ new}}</h3>
+            <p>Description: {{ des}}</p>
+            <button><a href="{{url}}">Read more</a></button>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="categories col-md-6" style="margin-top:-50%;">
+
+        <ul style="height: 100%;width: 25%;position: fixed;">
+            <li><a class="{{url}}">Health</a></li>
+            <li><a href="{{url}}">Entertainment</a></li>
+            <li><a href="{{url}}">Sports</a></li>
+            <li><a href="{{url}}">politics</a></li>
+        </ul>
+
+    </div>
 </body>
+
 </html>

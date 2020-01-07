@@ -18,24 +18,25 @@
 
     </div>
 
-    <div class=" col-md-6 container" style="margin-left:25%;padding:1px 16px;height:1000px;">
-        {% for new, des, i in context %}
-        <img src="{{ i }}" alt="{{ title }} class=img-fluid">
+    <div class=" container" style="padding:1px 16px;">
+        {% for new, des, i, pubAt in context %}
+        <img src="{{ i }}" alt="{{ title }}" class="img-fluid">
         <h3>News: {{ new}}</h3>
-        <p>Description: {{ des}}</p>
-        <button><a href="{{url}}">Read more</a></button>
+        <p>Description: {{ des }}</p>
+        <p>Published On: {{pubAt}}</p>
+        <p><a href="{{url}}" class="btn-primary p-2">Read more</a></p>
         {% endfor %}
     </div>
-    <div class="categories col-md-6" style="margin-top:-50%;">
-        
-        <ul>
-            <li><a class="{{url}}">Health</a></li>
-            <li><a href="{{url}}">Entertainment</a></li>
-            <li><a href="{{url}}">Sports</a></li>
-            <li><a href="{{url}}">politics</a></li>
-        </ul>
 
-    </div>
+
+    <ul>
+        <li><a class="{{url}}">Health</a></li>
+        <li><a href="{{url}}">Entertainment</a></li>
+        <li><a href="{{url}}">Sports</a></li>
+        <li><a href="{{url}}">politics</a></li>
+    </ul>
+
+
 </body>
 
 </html>

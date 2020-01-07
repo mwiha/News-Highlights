@@ -62,7 +62,6 @@ def abc ():
     desc = []
     news = []
     img = []
-    pubAt = []
 
     for i in range(len(articles)):
         myarticles = articles[i]
@@ -70,9 +69,8 @@ def abc ():
         news.append(myarticles['title'])
         desc.append(myarticles['description'])
         img.append(myarticles['urlToImage'])
-        pubAt.append(myarticles['publishedAt'])
         
-    mylist = zip(news,desc,img, pubAt)
+    mylist = zip(news,desc,img)
         
     return render_template('abc.html', context = mylist)
 
@@ -89,8 +87,6 @@ def Cnn():
     desc = []
     news = []
     img = []
-    url = []
-    pubAt = []
 
     for i in range(len(articles)):
         myarticles = articles[i]
@@ -98,10 +94,8 @@ def Cnn():
         news.append(myarticles['title'])
         desc.append(myarticles['description'])
         img.append(myarticles['urlToImage'])
-        url.append(myarticles['url'])
-        pubAt.append(myarticles['publishedAt'])
         
-    mylist = zip(news,desc,img, url, pubAt)
+    mylist = zip(news,desc,img)
         
     return render_template('cnn.html', context = mylist)
 
@@ -116,7 +110,7 @@ def Associatedpress():
     desc = []
     news = []
     img = []
-    pubAt= []
+    url = []
 
     for i in range(len(articles)):
         myarticles = articles[i]
@@ -124,9 +118,9 @@ def Associatedpress():
         news.append(myarticles['title'])
         desc.append(myarticles['description'])
         img.append(myarticles['urlToImage'])
-        pubAt.append(myarticles['publishedAt'])
+        url.append(myarticles['url'])
         
-    mylist = zip(news,desc,img,pubAt)
+    mylist = zip(news,desc,img,url)
         
     return render_template('associatedpress.html', context = mylist)
 

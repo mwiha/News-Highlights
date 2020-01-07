@@ -100,10 +100,9 @@ def Cnn():
         news.append(myarticles['title'])
         desc.append(myarticles['description'])
         img.append(myarticles['urlToImage'])
-        url.append(myarticles['url'])
         pubAt.append(myarticles['publishedAt'])
         
-    mylist = zip(news,desc,img, url, pubAt)
+    mylist = zip(news,desc,img,pubAt)
         
     return render_template('cnn.html', context = mylist)
 

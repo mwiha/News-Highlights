@@ -7,7 +7,6 @@ class Config:
 NEWS_API_BASE_URL =('https://newsapi.org/v2/top-headlines?' 'country=us&' 'apiKey=c2dc80373e954e7fbd0678a357875019')
 
 
-
 class ProdConfig(Config):
     '''
     Production  configuration child class
@@ -27,3 +26,8 @@ class DevConfig(Config):
     '''
 
     DEBUG = True
+    
+config_options ={
+    'development': DevConfig,
+    'production':ProdConfig
+}
